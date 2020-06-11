@@ -1,0 +1,41 @@
+.main{
+	width: 100%;
+	height: 630px;
+	margin: 0 auto 0 auto;
+	background-image: url(images/zhuce2.jpg);
+	background-size: 100% 630px;
+	}
+.zhuce{
+	width: 480px;
+	height: 360px;	
+	position: absolute;
+	top: 100px;
+	left: 400px;
+	text-align: center;
+	padding-top: 1px;
+	margin-left: auto;
+	margin-right: auto;	
+	background: url(images/loginbg.jpg);
+	background-size: 100% 360px;
+	opacity: 0.8;
+	}
+.input1{
+	border:0;
+	padding: 0;
+	margin:0;
+	border:1px solid #cccccc;
+	width:200px;
+	height:37px;
+	padding-left: 10px;
+	color: #000000;
+	}
+.input2{
+	border:0;
+	padding: 0;
+	margin:0;
+	border:1px solid #cccccc;
+	width:200px;
+	height:37px;
+	padding-left: 10px;
+	color: #cccccc;
+	}

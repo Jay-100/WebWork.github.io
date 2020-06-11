@@ -1,0 +1,143 @@
+.topleft{
+	width: 800px;
+	height: 100px;
+	margin: 0 auto 0 auto;
+	border-bottom: solid 1px;
+	}
+.topleft p{
+	padding-top: 10px;
+	font-size: 44px;
+	font-family: 黑体;
+	float: left;
+	position: absolute;
+	top: -5px;
+	}
+.topright{
+	font-size: 24px;
+	font-family: 宋体;
+	float: right bottom;	
+	float: right;
+	position: absolute;
+	top: 75px;
+	right: 262px;
+	}
+.top1{
+	width: 800px;
+	height: 500px;
+	padding-top: 15px;
+	margin: 0 auto 0 auto;	
+	background: url(images/China.jpg) no-repeat right;
+	background-size: 800px 500px;
+	}
+.bottom{
+	width: 800px;
+	height: 500px;
+	margin: -10px auto 0 auto;	
+	background: url(images/3.jpg) no-repeat right;
+	background-size: 800px 350px;
+	}
+.jianjie{
+	width: 800px;
+	margin: 0 auto 0 auto;
+	background-color: #d3d2d2;
+	}
+.jianjie p{
+	background: url(images/biaoti.jpg) no-repeat left top;
+	}
+.jianjie a{
+	font-size: 32px;
+	text-decoration: none;
+	padding-left: 5px; 
+	padding-bottom: 10px;
+	color: black;
+	}
+.tuijian{
+	width: 800px;
+	margin: 0 auto 0 auto;
+	text-align: center;
+	font-size: 32px;
+	font-family: 黑体;
+	padding-top: 30px;
+	}
+
+ * {
+            margin: 0;
+            padding: 0
+        }
+        .box {
+            width: 800px;
+            height: 500px;
+            border: 1px solid #ccc;
+            margin: 20px auto 30px auto;
+            padding: 5px;
+ 
+        }
+        .inner{
+            width: 800px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+        .inner img{
+            width: 800px;
+            height: 500px;
+            vertical-align: top
+        }
+        ul {
+            width: 1000%;
+            position: absolute;
+            list-style: none;
+            left:0;
+            top: 0;
+        }
+        .inner li{
+            float: left;
+ 
+        }
+ 
+        ol {
+            position: absolute;
+            height: 20px;
+            right: 20px;
+            bottom: 20px;
+            text-align: center;
+            padding: 5px;
+        }
+        ol li{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            background-color: #fff;
+            margin: 5px;
+            cursor: pointer;
+ 
+        }
+        ol .current{
+            background-color: red;
+        }
+        #arr{
+            display: none;
+        }
+        #arr span{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #fff;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #000;
+            opacity: 0.5;
+            border: 1px solid #fff;
+        }
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }

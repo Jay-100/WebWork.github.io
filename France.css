@@ -1,0 +1,83 @@
+.topleft{
+	width: 800px;
+	height: 100px;
+	margin: 0 auto 0 auto;
+	border-bottom: solid 1px;
+	}
+.topleft p{
+	padding-top: 10px;
+	font-size: 44px;
+	font-family: 黑体;
+	float: left;
+	position: absolute;
+	top: -50px;
+	}
+.topright{
+	font-size: 24px;
+	font-family: 宋体;
+	float: right bottom;	
+	float: right;
+	position: absolute;
+	top: 80px;
+	right: 262px;
+	}
+.top1{
+	width: 800px;
+	height: 400px;
+	padding-top: 15px;
+	margin: 0 auto 0 auto;	
+	background: url(images/France.jpg) no-repeat right;
+	background-size: 800px 400px;
+	}
+.jianjie{
+	width: 800px;
+	margin: 0 auto 0 auto;
+	background-color: #d3d2d2;
+	}
+.jianjie p{
+	background: url(images/biaoti.jpg) no-repeat left top;
+	}
+.jianjie a{
+	font-size: 32px;
+	text-decoration: none;
+	padding-left: 5px; 
+	padding-bottom: 10px;
+	color: black;
+	}
+.tuijian{
+	width: 800px;
+	margin: 0 auto 0 auto;
+	text-align: center;
+	font-size: 32px;
+	font-family: 黑体;
+	padding-top: 10px;
+	}
+
+.main{
+	width:800px;
+	list-style-type:none;
+	margin: 0 auto 0 auto;
+	}
+.main li{
+	float: left;
+	width: 250px;
+	height: 235px;
+	border:solid #c3c3c3 2px;
+	font-size: 0;
+	margin: 15px 14px 5px -8px;
+	background-color: #ccc9c9;
+	}
+.main p{
+	text-align:center;
+	margin: 0;
+	font-size: 14px;
+	font-family: 宋体;
+	}
+#chengshi{
+	font-size: 24px;
+	padding: 5px 0 5px 0;
+	}
+#photo{
+	width: 250px;
+	height: 150px;
+	}

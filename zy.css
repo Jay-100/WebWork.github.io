@@ -1,0 +1,137 @@
+.top{
+	width: 100%;
+	height: 500px;
+	margin: 0 auto 0 auto;
+	background-image: url(images/主.jpg);
+	background-size: 1520px 500px;
+	}
+.wenzi{
+	width: 100%;
+	height: 150px;
+	text-align: center;
+	font-size: 54px;
+	font-family: 方正兰亭粗黑;
+	color: white;
+	padding-top: 200px;
+	}
+.wenzi img{
+	margin-bottom: -30px;
+	height: 100px;
+	}
+.sousuo{
+	width: 1000px;
+	height: 80px;
+	padding-left: 250px;
+	}
+.sousuo input{
+	width: 1000px;
+	height: 60px;
+	background: url(images/sousuo.jpg) no-repeat right; 
+	border: solid 1px #cccccc;
+	color: white;
+	font-size: 20px;
+	}
+
+.daohang{
+	height: 40px;
+	text-align: center;
+	font-size: 28px;
+	padding-top: 30px; 
+	}
+.daohang a{
+	padding: 10px; 
+	border-bottom: solid 1px #cccccc; 
+	color: #b3b0b0;
+	text-decoration: none;
+	}
+.daohang a:hover{
+	color: black;
+	border-bottom: solid 2px #28b76c;
+	}
+#denglu{
+	float: right;
+	padding: 10px;
+	margin: -5px 0 5px 0;
+	border: solid 1px #cccccc;
+	background-color: #28b76c;
+	color: white; 
+	text-decoration: none;
+	font-size: 24px;
+	}
+#denglu:hover{
+	background-color: #349461; 
+	}
+
+.tuijian{
+	width: 1500px;
+	text-align: center;
+	padding-top: 80px; 
+	float: center;
+	font-size: 26px;
+	}
+
+.chengshi{
+	list-style-type: none; 
+	width: 800px;
+	text-align: left;
+	padding-top: 80px; 
+	padding-bottom: 50px;
+	float: center;
+	font-size: 26px;
+	position: relative;
+	left: 300px;
+	}
+.chengshi li{
+	padding-top: 20px;
+	font-size: 14px；
+	color: black;
+	text-decoration: none;
+	}
+.chengshi a{
+	text-decoration: none;
+	font-size: 18px;
+	color: #b3b0b0;
+	position: relative;
+	top: -4px;
+	left: 200px;
+	}
+#lianjie:hover{
+	color: #28b76c;
+	}
+#chengshi1{
+	padding-top: 20px;
+	font-size: 14px；
+	color: black;
+	text-decoration: none;
+	}
+#chengshi1 a{
+	text-decoration: none;
+	font-size: 18px;
+	color: #b3b0b0;
+	position: relative;
+	top: -4px;
+	left: 175px;
+	}
+#chengshi2{
+	padding-top: 20px;
+	font-size: 14px；
+	color: black;
+	text-decoration: none;
+	}
+#chengshi2 a{
+	text-decoration: none;
+	font-size: 18px;
+	color: #b3b0b0;
+	position: relative;
+	top: -4px;
+	left: 97px;
+	}
+.bottom{
+	width: 100%;
+	text-align: center;
+	}
+.bottom a{
+	text-decoration: none;
+	color: black;
+	font-size: 18px;
+	}

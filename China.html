@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>中国</title>
+	<link rel="stylesheet" href="China.css">
+</head>
+<body>
+	<div class="topleft">
+		<p>中国</br>China</br></p>
+	</div>
+	<div class="topright">
+		522659人去过这里, 6666301条目的地点评
+	</div>
+	<div class="top1"></div>
+
+	<div class="jianjie">
+		<p><a href="">简介：</a></br>中国，是以华夏文明为源泉、中华文化为基础，并以汉族为主体民族的多民族国家，通用汉语、汉字，汉族与少数民族被统称为“中华民族”，又自称为炎黄子孙、龙的传人。中国是世界四大文明古国之一，有着悠久的历史，距今约5000年前，以中原地区为中心开始出现聚落组织进而形成国家，后历经多次民族交融和朝代更迭，直至形成多民族国家的大一统局面。中国文化渊远流长、博大精深、绚烂多彩，是东亚文化圈的文化宗主国，在世界文化体系内占有重要地位，由于各地的地理位置、自然条件的差异，人文、经济方面也各有特点。传统文化艺术形式有诗词、戏曲、书法、国画等，而春节、元宵、清明、端午、中秋、重阳等则是中国重要的传统节日。</p>
+		<p><a href="">文化：</a></br>中国自古就是一个礼仪之邦，“礼”乃中国文化的精髓。古代的“礼射”不仅贯穿与融合了华夏数千年璀璨的历史文明，而且深度影响了世界，是人类文明的重要组成部分，是人类为维系和发展优良的社会秩序与生态和谐而共同遵守的道德规范；是人类文明与智慧的结晶。“礼”和“射”分别为中国古代六艺之一，包括“礼、乐、射、御、书、数”。
+		</p>
+	</div>
+
+	<div class="tuijian">
+		中国热门城市
+	</div>
+	<div class="box" id="box">
+    <div class="inner">
+        <!--轮播图-->
+        <ul>
+            <li><a href="#"><img src="images/1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/2.jpg" alt=""></a></li>
+        </ul>
+        <ol class="bar">
+        </ol>
+        <!--左右焦点-->
+        <div id="arr">
+                    <span id="left">
+                        <
+                    </span>
+            <span id="right">
+                        >
+                    </span>
+        </div>
+    </div>
+</div>
+<div class="tuijian">
+	中国热门微精囊
+</div>
+<div class="bottom"></div>
+<script>
+    /**
+     *
+     * @param id  传入元素的id
+     * @returns {HTMLElement | null}  返回标签对象，方便获取元素
+     */
+    function my$(id) {
+        return document.getElementById(id);
+    }
+ 
+    //获取各元素，方便操作
+    var box=my$("box");
+    var inner=box.children[0];
+    var ulObj=inner.children[0];
+    var list=ulObj.children;
+    var olObj=inner.children[1];
+    var arr=my$("arr");
+    var imgWidth=inner.offsetWidth;
+    var right=my$("right");
+    var pic=0;
+    //根据li个数，创建小按钮
+    for(var i=0;i<list.length;i++){
+        var liObj=document.createElement("li");
+ 
+        olObj.appendChild(liObj);
+        liObj.innerText=(i+1);
+        liObj.setAttribute("index",i);
+ 
+        //为按钮注册mouseover事件
+        liObj.οnmοuseοver=function () {
+            //先清除所有按钮的样式
+ 
+            for (var j=0;j<olObj.children.length;j++){
+                olObj.children[j].removeAttribute("class");
+            }
+            this.className="current";
+            pic=this.getAttribute("index");
+            animate(ulObj,-pic*imgWidth);
+        }
+ 
+    }
+
+    //设置ol中第一个li有背景颜色
+    olObj.children[0].className = "current";
+    //克隆一个ul中第一个li,加入到ul中的最后=====克隆
+    ulObj.appendChild(ulObj.children[0].cloneNode(true));
+ 
+    var timeId=setInterval(onmouseclickHandle,5000);
+    //左右焦点实现点击切换图片功能
+    box.οnmοuseοver=function () {
+        arr.style.display="block";
+        clearInterval(timeId);
+    };
+    box.οnmοuseοut=function () {
+        arr.style.display="none";
+        timeId=setInterval(onmouseclickHandle,5000);
+    };
+ 
+    right.οnclick=onmouseclickHandle;
+    function onmouseclickHandle() {
+        //如果pic的值是5,恰巧是ul中li的个数-1的值,此时页面显示第六个图片,而用户会认为这是第一个图,
+        //所以,如果用户再次点击按钮,用户应该看到第二个图片
+        if (pic == list.length - 1) {
+            //如何从第6个图,跳转到第一个图
+            pic = 0;//先设置pic=0
+            ulObj.style.left = 0 + "px";//把ul的位置还原成开始的默认位置
+        }
+        pic++;//立刻设置pic加1,那么此时用户就会看到第二个图片了
+        animate(ulObj, -pic * imgWidth);//pic从0的值加1之后,pic的值是1,然后ul移动出去一个图片
+        //如果pic==5说明,此时显示第6个图(内容是第一张图片),第一个小按钮有颜色,
+        if (pic == list.length - 1) {
+            //第五个按钮颜色干掉
+            olObj.children[olObj.children.length - 1].className = "";
+            //第一个按钮颜色设置上
+            olObj.children[0].className = "current";
+        } else {
+            //干掉所有的小按钮的背景颜色
+            for (var i = 0; i < olObj.children.length; i++) {
+                olObj.children[i].removeAttribute("class");
+            }
+            olObj.children[pic].className = "current";
+        }
+    }
+    //设置任意的一个元素,移动到指定的目标位置
+    function animate(element, target) {
+        clearInterval(element.timeId);
+        //定时器的id值存储到对象的一个属性中
+        element.timeId = setInterval(function () {
+            //获取元素的当前的位置,数字类型
+            var current = element.offsetLeft;
+            //每次移动的距离
+            var step = 10;
+            step = current < target ? step : -step;
+            //当前移动到位置
+            current += step;
+            if (Math.abs(current - target) > Math.abs(step)) {
+                element.style.left = current + "px";
+            } else {
+                //清理定时器
+                clearInterval(element.timeId);
+                //直接到达目标
+                element.style.left = target + "px";
+            }
+        }, 10);
+    }
+</script>
+</body>
+</html>
